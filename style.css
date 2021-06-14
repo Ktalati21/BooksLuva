@@ -1,0 +1,298 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    color: rgb(50, 51, 58);
+    /* background: url('/assets/bg2.jpg') no-repeat fixed center/cover; */
+    background-color: #acc7e2;
+    top: 0%;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.8;
+}
+
+.container {
+    display: grid;
+    margin: auto auto;
+    grid-template-areas:'nav1 nav1 nav1 nav1'
+    'nav2 nav2 nav2 nav2'
+    'contain contain contain contain'
+    'secRev secRev secRev secRev' ;  
+} 
+
+
+/* navigation bar top */
+
+#nav1{
+    grid-area: nav1;
+    display: flex;
+    position: relative;
+    align-items: center;
+    
+}
+#nav1::before{  
+    content: "";
+    position: absolute;
+    background-color: #362f34;
+    height: 100%;
+    width: 100%; 
+    z-index: -1;
+    opacity: 0.4;
+}
+#logo{
+    margin: 10px 34px;
+}
+
+#logo img{
+    height: 59px;
+    margin-bottom: 10px;
+    margin-top: 3px;
+    margin-left: 6px;
+    margin-right: 6px;
+}
+.NavUL{ 
+    display: flex;
+    float: left;
+   
+} 
+.NavLI{
+    list-style: none;
+    font-weight: bold;
+    text-align: center;
+}
+.NavLI a{
+    display:block;
+    padding: 3px 22px;
+    border-radius: 11px;
+    color: rgb(37, 38, 39);
+    text-decoration: none;
+}
+.NavLI a:hover{
+
+    color: rgb(177, 135, 231);
+    background-color: rgb(45, 39, 82);
+}
+
+
+
+
+
+/* Book Name */
+
+#nav2{
+    grid-area: nav2;
+    position: sticky;
+    top: 0%;
+    background-color: rgb(55, 35, 55);
+}
+#nav2 h2{
+    font-family: 'Quicksand','sans serif','Bree Serif';
+    font-weight: bold;
+    color: rgb(212, 208, 208);
+    font-size: 300%;
+    margin: auto auto;
+    padding: 10px 10px;
+    text-align: center;
+}
+#nav2::before{  
+    content: "";
+    position: absolute;
+    background-color: rgb(48, 43, 43);
+    height: 100%;
+    width: 100%; 
+    z-index: -1;
+    opacity: 0.9;
+}
+
+
+
+
+/* contain */
+.contain{
+    grid-area: contain;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Book image */
+.secBookpic{
+    width: 50%;
+    padding:3px 2px;
+    z-index: -2;
+    justify-content: center;
+    align-items: center;
+
+}
+#secBookPic img{
+    display: block;
+    margin: auto auto;
+    border:5px solid rgb(110, 107, 107) ;
+    padding: 2px 2px;
+    height:700px;
+    width: 650px;
+}
+
+
+
+.secBookDet{
+    
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+}
+.secBookDet h3{
+    font-family: 'Quicksand','sans serif','Bree Serif';
+    text-decoration-line: underline;
+    font-size: 250%;
+    text-align: center;
+    padding: 23px 23px;
+    margin: 23px 23px;
+}
+.detail{
+    text-align: center;
+    padding: 23px 23px;
+    margin: 23px 23px;
+    font-size: 200%;
+    border-top:3px solid azure;
+    border-bottom:3px solid azure;
+    
+}
+.detail i{
+    font-weight: bold;
+    font-size: 75%;
+    text-decoration: line-through;
+}
+.btn {
+    font-family: 'Quicksand','sans serif','Bree Serif', cursive;
+    margin: 0px 9px;
+    background-color: rgb(196, 19, 19);
+    color: white;
+    padding: 12px 23px;
+
+    margin: 23px 23px;
+    border: 2px solid grey;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: rgb(148, 106, 106);
+}
+
+
+
+
+
+/* Review section */
+#secRev{
+    grid-area: secRev;
+    position: relative;
+    align-items: center;
+    z-index: -2;
+    border-top: 3px solid rgb(112, 182, 112);
+    border-bottom: 3px solid rgb(112, 182, 112);
+
+}
+#contact-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+}
+#contact-box input, 
+#contact-box textarea{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 9px;
+    font-size: 1.1rem;
+} 
+
+#contact-box form{
+    width: 40%;
+}
+
+#contact-box label{
+   font-size: 1.3rem;
+   font-family: 'Quicksand','sans serif','Bree Serif';
+
+}
+.h-primary{
+    font-family: 'Quicksand','sans serif','Bree Serif';
+    font-size: 3.8rem;
+    padding: 12px;
+    text-align: center;
+}
+
+
+
+
+
+
+/* materials */
+
+
+
+
+.icon {
+    padding: 10px;
+    
+    /* background: dodgerblue; */
+    color:#ef3f49;
+    min-width: 50px;
+    text-align: center;
+}
+
+
+.mydiv img{
+    height:800px;
+    width: 750px;
+}
+
+
+
+/* MObile view */
+@media screen and (max-width: 1220px){
+    /* body{
+        background:none;
+        top: 0%;
+        left: 0%;
+        height: 100%;
+        width: 100%;
+    } */
+    .topbar-content{
+        display: none;
+    }
+    .contain{
+        grid-area: contain;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+    .secBookpic{
+        /* grid-area: secBookPic; */
+        
+        width: 100%;
+    }
+    .secBookDet{
+    
+        width: 100%;
+    }
+    #nav1{
+        flex-direction: column;
+        /* align-items: center; */
+
+        
+    }
+
+}
